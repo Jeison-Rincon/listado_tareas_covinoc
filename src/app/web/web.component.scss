@@ -1,3 +1,5 @@
+@import '../../assets/scss/vars.scss';
+
 .img{
     width: 20%;
     min-width: 200px;
@@ -7,4 +9,25 @@
     position: fixed;
     bottom: 2px;
     right: 20px;
+    z-index: 2;
+}
+
+.repo{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: all .2s ease;
+    text-align: center;
+    img{
+        width: 56px;
+        height: auto;
+    }
+    p{
+        color: $textGrayColor;
+    }
+    &:hover{
+        text-decoration: none;
+        cursor: pointer;
+        transform: scale(1.2);
+    }
 }

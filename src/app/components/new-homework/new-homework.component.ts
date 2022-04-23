@@ -32,7 +32,7 @@ export class NewHomeworkComponent implements OnInit {
         
         let data = {
           state: (this.formNewHomework.get('status')?.value == true)? true: false,
-          title: this.formNewHomework.get('title')?.value
+          title: (this.formNewHomework.get('title')?.value).toLowerCase()
         }
   
         this.homeworkService.setHomeworks(data).subscribe(

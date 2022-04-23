@@ -107,15 +107,12 @@ export class ListComponent implements OnInit {
 
   search(text:any){
     try { 
-      let val = text.value;
+      let val = (text.value).toLowerCase();
       let searchResults:any = [];
-  
+      
       if(parseInt(val)){
         this.data.forEach((e)=>{
-          if(e.id.indexOf(val) != -1){
-            searchResults.push(e)
-          }
-          if(e.title.indexOf(val) != -1){
+          if(e.id.indexOf(val) != -1 || e.title.indexOf(val) != -1){
             searchResults.push(e)
           }
         })
