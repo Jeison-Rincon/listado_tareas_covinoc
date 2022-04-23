@@ -1,0 +1,34 @@
+<div class="row b-primary p-4 box-shadow">
+    <div class="col-lg-8 mx-auto">
+        <span class="c-white font-weigth-bold btn-new"><i class="icon icon-plus-white mr-2"></i>Nueva Tarea</span>
+    </div>
+    <div class="col-lg-8 mx-auto mt-2">
+        <form [formGroup]="formNewHomework" class="row">
+            <div class="col-md-6">
+                <div class="content-input-site">
+                    <label for="" class="content-input-site__label">Título</label>
+                    <input type="text" formControlName="title" class="content-input-site__input" placeholder="Ingrese título...">
+                </div>
+            </div>
+            <div class="col-md-6 aling-self-center mt-3">
+                <div class="row">
+                    <div class="col-sm-6 d-flex justify-content-center align-items-center">
+                        <label class="span" for="complete">Tarea completada</label>
+                        <div class="ml-2">
+                            <label class="checkbox">
+                                <input type="checkbox" formControlName="status" class="mx-4" id="complete"/>
+                                <span class="uncheck px-3 mr-3"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 pt-2 text-center">
+                        <button class="button-site"  (click)="addHomework()">
+                            <i class="icon-13 icon-plus-dark mr-3"></i>
+                            <span class="button-site__span">GUARDAR TAREA</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="20" height="17" version="1.1" viewBox="0 0 5.2917 4.4979" xmlns="http://www.w3.org/2000/svg">
+ <g fill="#13806a" stroke="#13806a" stroke-linecap="round" stroke-linejoin="round">
+  <ellipse cx=".85507" cy="4.0804" rx=".37379" ry=".35302" stop-color="#000000" stroke-width=".12905"/>
+  <rect x="2.0396" y="3.8416" width="3.1876" height=".47761" rx=".10731" ry=".04153" stop-color="#000000" stroke-width=".12905"/>
+  <rect x="2.0396" y="2.1663" width="3.1875" height=".47761" rx=".1073" ry=".04153" stop-color="#000000" stroke-width=".12905"/>
+  <g transform="matrix(.33264 -.35673 .35673 .33264 -42.112 -7.6849)">
+   <rect transform="matrix(-4.501e-5 1 -1 -2.4949e-5 0 0)" x="78.419" y="-46.65" width=".77845" height="2.4757" rx=".093106" ry=".059966" stop-color="#000000" stroke-width=".27736"/>
+   <rect x="43.761" y="77.375" width=".77845" height="1.8432" rx=".093106" ry=".044645" stop-color="#000000" stroke-width=".23932"/>
+  </g>
+  <rect x="2.0396" y=".45837" width="3.1875" height=".47761" rx=".1073" ry=".04153" stop-color="#000000" stroke-width=".12905"/>
+  <g transform="matrix(.33264 -.35673 .35673 .33264 -42.112 -9.3927)">
+   <rect transform="matrix(-4.501e-5 1 -1 -2.4949e-5 0 0)" x="78.419" y="-46.65" width=".77845" height="2.4757" rx=".093106" ry=".059966" stop-color="#000000" stroke-width=".27736"/>
+   <rect x="43.761" y="77.375" width=".77845" height="1.8432" rx=".093106" ry=".044645" stop-color="#000000" stroke-width=".23932"/>
+  </g>
+ </g>
+</svg>

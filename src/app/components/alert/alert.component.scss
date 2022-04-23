@@ -1,0 +1,17 @@
+.alert{
+    width: 250px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.hidden_animate{
+    animation-name: hiddenOpacity;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hiddenOpacity {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}

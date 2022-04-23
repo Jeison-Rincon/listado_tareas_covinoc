@@ -1,0 +1,57 @@
+<div class="container-fluid p-0">
+    <!-- header -->
+    <div class="row">
+        <div class="col-md-6">
+            <p class="title"><i class="icon-20 icon-plus-checklist mr-2"></i>Lista de Tareas</p>
+        </div>
+        <div class="col-md-6">
+            <div class="container-search">
+                <input type="text" class="container-search__input" placeholder="Buscar ..." (keyup)="search($event.target)">
+                <i class="container-search__icon icon-plus-search"></i>
+            </div>
+        </div>
+    </div>
+    <!-- table  -->
+    <div class="row mt-3">
+        <div class="table-site">
+            <!-- header table  -->
+            <div class="table-site__header">
+                <div class="table-site__header__text table-site__id">Id</div>
+                <div class="table-site__header__text table-site__homework">Mis Tareas</div>
+                <div class="table-site__header__text table-site__check">
+                    <i class="icon-plus-checkcomplete"></i>
+                    <p>Completada</p>
+                </div>
+                <div class="table-site__header__text table-site__delete">Borrar</div>
+            </div>
+            <!-- body table  -->
+            <div class="table-site__body" *ngFor="let homework of paginator[(paginatorNumber-1)]?.data;">
+                <div class="table-site__body__text table-site__id">{{homework.id}}</div>
+                <div class="table-site__body__text table-site__homework"
+                    [ngClass]="{'table-site__body__text--through':homework.state == true}">{{homework.title}}</div>
+                <div class="table-site__body__text table-site__check">
+                    <label class="checkbox">
+                        <input type="checkbox" class="mx-4" id="service-7" [checked]="homework.state"
+                            (click)="updateHomework($event.target,homework.id)" />
+                        <span class="uncheck px-3 mr-3"></span>
+                    </label>
+                </div>
+                <div class="table-site__body__text table-site__delete" (click)="deleteHomework(homework.id)">
+                    <i class="icon icon-plus-trash hover-pointer"></i>
+                </div>
+            </div>
+        </div>
+        <div class="paginator mt-4">
+            <div class="arrow-left" (click)="arrowAction('left')">
+                <img alt="covinoc_arrow" src="/assets/svg/right-arrow.png"  class="filter" alt="">
+            </div>
+            <div class="paginator__page" *ngFor="let page of paginator"
+                [ngClass]="{'paginator__page--active':page.page == paginatorNumber}">
+                <span (click)="paginatorNumber = page.page">{{page.page}}</span>
+            </div>
+            <div class="arrow-right" (click)="arrowAction('right')">
+                <img alt="covinoc_arrow" src="/assets/svg/right-arrow.png"  class="filter" alt="">
+            </div>
+        </div>
+    </div>
+</div>

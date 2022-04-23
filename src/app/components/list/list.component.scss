@@ -1,0 +1,149 @@
+@import '../../../assets/scss/vars.scss';
+@import '../../../assets/scss/checkbox.scss';
+
+%row_table{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.title{
+    color: $textPrimaryColor;
+    font-size: 25px;
+}
+
+.container-search{
+    position: relative;
+    @at-root #{&}__input{
+        background-color: $whiteColor;
+        width: 100%;
+        border: 1px $primary2Color solid;
+        border-radius: 20px;
+        padding: 7px 20px;
+        box-shadow: 0px 2px 4px 2px rgba(0,0,0,.25);
+    }
+    @at-root #{&}__icon{
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        width: 22px;
+    }
+}
+
+.table-site{
+    padding: 5px 30px 10px 30px; 
+    width: 100%;
+    border-radius: 7px;
+    box-shadow: 0px 3px 6px #00000029;
+    
+    @at-root #{&}__header{
+        @extend %row_table;
+        border-bottom: 1px $grayColor solid;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        @at-root #{&}__text{
+            font-size: 20px;
+            text-align: center;
+            color: $textPrimary2Color;
+        }
+    }
+    
+    @at-root #{&}__body{
+        @extend %row_table;
+        position: relative;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        &::before{
+            content: '';
+            width: 75%;
+            margin-left: 12.5%;
+            margin-right: 12.5%;
+            height: 1px;
+            top: 60px;
+            position: absolute;
+            background: $grayColor;
+        }
+        @at-root #{&}__text{
+            font-size: 20px;
+            text-align: center;
+            color: $textGrayColor;
+            text-transform: lowercase;
+            @at-root #{&}--through{
+                text-decoration: line-through;
+            }
+        }
+    }
+    
+    @at-root #{&}__id{
+        width: 15%;
+    }
+    @at-root #{&}__homework{
+        width: 55%;
+    }
+    @at-root #{&}__check{
+        width: 15%;
+        .icon-plus-checkcomplete{
+            width: 30px;
+            margin: auto;
+            display: none;
+        }
+        @media screen and (max-width: 750px) {
+            p{
+                display: none;
+            }
+            .icon-plus-checkcomplete{
+                display: inherit;
+            }
+        }
+    }
+    @at-root #{&}__delete{
+        width: 15%;
+    }
+    &:last-child{
+        &::before{
+            content: none;
+        }
+    }
+}
+
+.paginator{
+    @extend %row_table;
+    justify-content: center;
+    width: 100%;
+    @at-root #{&}__page{
+        &:hover{
+            cursor: pointer;
+        }
+        background: $gray2Color;
+        border-radius: 9px;
+        padding: 7px 9px;
+        margin: 5px;
+        box-shadow: 0px 3px 6px #00000029;
+        span{
+            color: $whiteColor;
+            font-size: 19px;
+            font-weight: 700;
+        }
+        @at-root #{&}--active{
+            background: $beigeColor;
+        }
+    }
+}
+.arrow-left{
+    transform: scaleX(-1);
+    align-self: center;
+    margin-right: 20px;
+}
+.arrow-right{
+    align-self: center;
+    margin-left: 20px;
+}
+
+.filter{
+    height: 25px;
+    filter: invert(89%) sepia(0%) saturate(0%) hue-rotate(173deg) brightness(97%) contrast(86%);
+    &:hover{
+        cursor: pointer;
+        filter: invert(72%) sepia(41%) saturate(3971%) hue-rotate(167deg) brightness(97%) contrast(83%);
+    }
+}

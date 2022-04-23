@@ -1,0 +1,14 @@
+<!-- header icon -->
+<div class="row justify-content-center align-items-center py-2">
+    <img alt="covinoc_logo" src="/assets/img/logo.png" alt="" srcset="" class="img">
+</div>
+<div class="container-fluid p-0 m-0">
+    <app-new-homework (eventNew)="updateList()" (error)="alertListing($event)"></app-new-homework>
+    <div class="col-lg-8 mx-auto mt-4 pb-5">
+        <app-list (error)="alertListing($event)"></app-list>
+    </div>
+</div>
+<app-alert class="alert-position"
+    [ngClass]="{'d-none': display_alert == true}"
+    [type]="alert_type" 
+    [message]="alert_message"></app-alert>
